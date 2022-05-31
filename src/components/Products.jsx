@@ -30,7 +30,7 @@ const Products = () => {
   const ShowProducts = () => {
     return (
       <>
-        <div className="buttons d-flex justify-content-conter mb-5 pb-5">
+        <div className="buttons d-flex justify-content-center mb-5 pb-5">
           <button className="btn btn-outline-dark me-2">All</button>
           <button className="btn btn-outline-dark me-2">Men's Clothing</button>
           <button className="btn btn-outline-dark me-2">
@@ -76,7 +76,7 @@ const Products = () => {
             <hr />
           </div>
         </div>
-        <div className="row justify-content-conter">
+        <div className="row d-flex justify-content-center">
           <ShowProducts />
         </div>
       </div>
