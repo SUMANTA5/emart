@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
+import { NavLink } from "react-router-dom";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -45,9 +46,9 @@ const Products = () => {
   };
 
   const filterProduct = (cat) => {
-    const updatedList = data.filter((x)=> x.category === cat);
+    const updatedList = data.filter((x) => x.category === cat);
     setFilter(updatedList);
-  }
+  };
 
   const ShowProducts = () => {
     return (
@@ -100,9 +101,12 @@ const Products = () => {
                       {product.title.substring(0, 12)}...
                     </h5>
                     <p class="card-text lead fw-bold">${product.price}</p>
-                    <a href="#" class="btn btn-outline-dark">
+                    <NavLink
+                      to={`/products/${product.id}`}
+                      class="btn btn-outline-dark"
+                    >
                       Buy Now
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
