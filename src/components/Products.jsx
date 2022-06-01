@@ -89,21 +89,21 @@ const Products = () => {
           return (
             <>
               <div className="col-md-3 mb-4">
-                <div class="card h-100 text-center p-4" key={product.id}>
+                <div className="card h-100 text-center p-4" key={product.id}>
                   <img
                     src={product.image}
-                    class="card-img-top"
+                    className="card-img-top"
                     alt={product.title}
                     height="250px"
                   />
-                  <div class="card-body">
-                    <h5 class="card-title mb-0">
+                  <div className="card-body">
+                    <h5 className="card-title mb-0">
                       {product.title.substring(0, 12)}...
                     </h5>
-                    <p class="card-text lead fw-bold">${product.price}</p>
+                    <p className="card-text lead fw-bold">${product.price}</p>
                     <NavLink
                       to={`/products/${product.id}`}
-                      class="btn btn-outline-dark"
+                      className="btn btn-outline-dark"
                     >
                       Buy Now
                     </NavLink>
